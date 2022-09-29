@@ -1,6 +1,6 @@
 upstream balancer {
-  server web1:82 max_fails=1 fail_timeout=1s;
-  server web2:82 max_fails=1 fail_timeout=1s;
+  server srv1:82 weight=100max_fails=2 fail_timeout=3s;
+  server srv2:82 weight=10 max_fails=2 fail_timeout=3s;
   server backup:82 backup;
 }
 
