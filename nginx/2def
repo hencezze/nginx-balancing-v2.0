@@ -1,5 +1,5 @@
 upstream balancer {
-  server srv1:82 weight=100max_fails=2 fail_timeout=3s;
+  server srv1:82 weight=100 max_fails=2 fail_timeout=3s;
   server srv2:82 weight=10 max_fails=2 fail_timeout=3s;
   server backup:82 backup;
 }
