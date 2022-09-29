@@ -1,0 +1,13 @@
+upstream balancer {
+  server web1:82 max_fails=1 fail_timeout=1s;
+  server web2:82 max_fails=1 fail_timeout=1s;
+  server backup:82 backup;
+}
+
+server {
+  listen 80;
+  server_name localhost;
+  location / {
+    proxy_pass http://balancer;
+  }
+}

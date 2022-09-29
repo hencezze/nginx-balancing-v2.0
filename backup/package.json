@@ -1,0 +1,16 @@
+{
+  "name": "backup",
+  "version": "1.0.0",
+  "description": "Running Node.js and Express.js on Docker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "redis": "3.1.2",
+    "request": "^2.88.2"
+  },
+  "author": "",
+  "license": "MIT"
+}

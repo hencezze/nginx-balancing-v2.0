@@ -1,0 +1,29 @@
+version: '3.3'
+services:
+  srv1:
+    image: localhost:5000/srv.js
+    container_name: srv1_main
+    volumes:
+      - ./srv1/server.js:/apt/server.js
+      - ./srv1/package.json:/apt/package.json
+  srv2:
+    image: localhost:5000/srv.js
+    container_name: srv2
+    volumes:
+      - ./srv2/server.js:/apt/server.js
+      - ./srv2/package.json:/apt/package.json
+  backup:
+    container_name: backup
+    image: localhost:5000/srv.js
+    volumes:
+      - ./backup/server.js:/apt/server.js
+      - ./backup/package.json:/apt/package.json
+  nginx:
+    container_name: nginx
+    build: ./nginx
+    ports:
+    - '80:80'
+    depends_on:
+    - web1
+    - web2
+    - backup
