@@ -21,6 +21,6 @@ jobs:
       run: |
         chmod +x start.sh
         ./start.sh
-     - name: curl localhost
-       run: curl localhost:80
+    - name: curl localhost
+      run: curl localhost:80
       
