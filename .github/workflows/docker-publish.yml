@@ -22,5 +22,5 @@ jobs:
     - name: Hi
       run: echo "${{ env.SDAROVA }}"
     - name: Use secret
-      name: echo "${{ secrets.SECRETIK }}"
+      run: echo "${{ secrets.SECRETIK }}"
       
