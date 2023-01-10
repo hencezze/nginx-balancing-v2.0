@@ -6,12 +6,8 @@ name: Docker
 # documentation.
 
 on:
-  schedule:
-    - cron: '40 23 * * *'
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ "main" 
 
 jobs:
   build:
@@ -20,4 +16,4 @@ jobs:
 
     steps:
     - name: start script
-      run: ./script.sh
+      run: .docker-compose up -d --build
