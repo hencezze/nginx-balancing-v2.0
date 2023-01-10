@@ -13,6 +13,8 @@ on:
 
 jobs:
   build:
+  env:
+    env-v-jobe: ky
 
     runs-on: ubuntu-latest
 
@@ -23,4 +25,6 @@ jobs:
       run: echo "${{ env.SDAROVA }}"
     - name: Use secret
       run: echo "${{ secrets.SECRETIK }}"
+    - name: Use env in job
+      run: echo "${{ env.env-v-jobe }}"
       
