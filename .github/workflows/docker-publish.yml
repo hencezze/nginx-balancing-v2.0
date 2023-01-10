@@ -15,5 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Add repo
+      uses: actions/checkout@v1
     - name: start script
-      run: .docker-compose up -d --build
+      run: docker-compose up -d --build
