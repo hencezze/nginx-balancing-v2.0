@@ -1,5 +1,6 @@
 name: Docker
-env: SDAROVA: "123"
+env: 
+  SDAROVA: "123"
  
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
