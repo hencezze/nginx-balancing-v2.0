@@ -18,4 +18,7 @@ jobs:
     - name: Add repo
       uses: actions/checkout@v1
     - name: start script
-      run: docker-compose up -d --build
+      run: |
+        chmod +x script.sh
+        ./script.sh
+      
