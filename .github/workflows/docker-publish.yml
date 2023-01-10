@@ -1,5 +1,6 @@
 name: Docker
-
+env: SDAROVA: "123"
+ 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
@@ -15,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Hi
+      run: echo "${{ env.SDAROVA }}"
     - name: Add repo
       uses: actions/checkout@v1
     - name: start script1
