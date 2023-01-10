@@ -13,10 +13,10 @@ on:
 
 jobs:
   build:
-  env:
-    env-v-jobe: ky
 
     runs-on: ubuntu-latest
+    env:
+    env-v-jobe: ky
 
     steps:
     - name: Add repo
@@ -27,4 +27,8 @@ jobs:
       run: echo "${{ secrets.SECRETIK }}"
     - name: Use env in job
       run: echo "${{ env.env-v-jobe }}"
+    - name: Local Env
+      env:
+        local-env: local
+      run: echo $local
       
