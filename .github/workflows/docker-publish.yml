@@ -17,7 +17,7 @@ jobs:
     steps:
     - name: Add repo
       uses: actions/checkout@v1
-    - name: start script
+    - name: start script1
       run: |
         chmod +x start.sh
         ./start.sh
