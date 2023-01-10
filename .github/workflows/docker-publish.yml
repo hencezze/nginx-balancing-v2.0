@@ -19,6 +19,6 @@ jobs:
       uses: actions/checkout@v1
     - name: start script
       run: |
-        chmod +x script.sh
+        chmod +x start.sh
         ./start.sh
       
