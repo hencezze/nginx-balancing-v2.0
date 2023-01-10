@@ -17,14 +17,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Hi
-      run: echo "${{ env.SDAROVA }}"
     - name: Add repo
       uses: actions/checkout@v1
-    - name: start script1
-      run: |
-        chmod +x start.sh
-        ./start.sh
-    - name: curl localhost
-      run: curl localhost:80
+    - name: Hi
+      run: echo "${{ env.SDAROVA }}"
+    - name: Use secret
+      name: echo "${{ secrets.SECRETIK }}"
       
